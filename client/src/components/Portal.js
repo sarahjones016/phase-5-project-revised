@@ -3,7 +3,9 @@ import "./Portal.css";
 
 function Portal() {
   return (
-    <div>Portal</div>
+    <div>
+      <h1>Portal</h1>
+    </div>
   )
 }
 

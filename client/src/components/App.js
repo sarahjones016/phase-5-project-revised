@@ -1,9 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { Switch, Route } from "react-router-dom";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import Login from "./Login";
+import Portal from "./Portal";
+import WaterKnowledge from "./WaterKnowledge";
 
 function App() {
-  // Code goes here!
+
+return (
+  <div>
+    <Routes>
+      <Route path='/' element={<Login />}></Route>
+      <Route path='/portal' element={<Portal />}></Route>
+      <Route path='/water-knowledge' element={<WaterKnowledge />}></Route>
+    </Routes>
+  </div>
+)
 }
 
 export default App;

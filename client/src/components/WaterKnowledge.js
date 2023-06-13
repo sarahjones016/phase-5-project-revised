@@ -3,7 +3,9 @@ import "./WaterKnowledge.css";
 
 function WaterKnowledge() {
   return (
-    <div>WaterKnowledge</div>
+    <div>
+      <h1>Water Knowledge</h1>
+    </div>
   )
 }
 
