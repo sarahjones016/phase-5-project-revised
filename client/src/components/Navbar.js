@@ -31,7 +31,7 @@ function Navbar({user, setUser}) {
             <RxHamburgerMenu onClick={handleNavClick}/>
         </IconContext.Provider>            
     </div> : <div className='navButton'>
-        <IconContext.Provider className='hamburgerMenu' value={{ size: "25px"}}>
+        <IconContext.Provider className='hamburgerMenu' value={{ size: "25px", color: "white"}}>
             <RxHamburgerMenu onClick={handleNavClick}/>
         </IconContext.Provider>
     </div>}
