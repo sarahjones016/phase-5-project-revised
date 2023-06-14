@@ -20,21 +20,27 @@ function Portal({user}) {
 
   return (
     <div className='portal'>
-      {/* <div className='overlay'></div> */}
-      {/* <video src={water} autoPlay loop muted /> */}
-      <div className='left-panel'>
-        <NewDayForm />
+      <div className='overlay'></div>
+      <video src={water} autoPlay loop muted />
+      <div className='main'>
+        <div className='panels'> 
+            <div className='left-panel'>
+              <NewDayForm />
+            </div>
+            <div className='right-panel'>
+              <div className='right-top'>
+                <MostRecentDay days={userDailyConsumptions}/>
+              </div>
+              <h2>All Days</h2>
+              <div className='right-bottom'>
+                <DaysList days={userDailyConsumptions}/>
+              </div>
+        </div>
       </div>
-      <div className='right-panel'>
-        <div className='right-top'>
-          <MostRecentDay days={userDailyConsumptions}/>
-        </div>
-        <h2>All Days</h2>
-        <div className='right-bottom'>
-          <DaysList days={userDailyConsumptions}/>
-        </div>
+     
       </div>
     </div>
+    
   )
 }
 

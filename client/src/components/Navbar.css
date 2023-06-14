@@ -1,19 +1,20 @@
 .hamburgerMenuDiv {
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     top: 0;
 }
 
 .hamburgerMenuDiv svg {
-    color: black;
+    color: #011325;
 }
 
 .navBar {
-    background-color: #f3f3f2;
+    background-color: #6b7f88;
     text-align: left;
     padding: 2%;
     width: 25vw;
     height: 100vh;
+    /* border-right: 1.5px solid #011325; */
 }
 
 .options li {
@@ -33,14 +34,15 @@
 }
 
 .navButtonTwo {
-    background-color: #f3f3f2;
+    background-color: #6b7f88;
     text-align: left;
     padding: 2%;
     width: 25vw;
+    /* border-right: 1.5px solid #011325; */
 }
 
 a {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -48,7 +50,7 @@ a {
     width: 75px;
     height: 30px;
     border: none;
-    background-color: rgb(72, 67, 67);
+    background-color: #011325;
     font-family: "Roboto Condensed";
     font-size: 18px;
     border-radius: 6px;
