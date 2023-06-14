@@ -27,7 +27,7 @@ function Navbar({user, setUser}) {
     <div className='hamburgerMenuDiv'>
         
     {showNavBar ? <div className='navButtonTwo'>
-        <IconContext.Provider className='hamburgerMenuTwo' value={{ size: "25px", color: "black"}}>
+        <IconContext.Provider className='hamburgerMenuTwo' value={{ size: "25px", color: "white"}}>
             <RxHamburgerMenu onClick={handleNavClick}/>
         </IconContext.Provider>            
     </div> : <div className='navButton'>
