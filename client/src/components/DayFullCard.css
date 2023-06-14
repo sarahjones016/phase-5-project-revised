@@ -1,0 +1,22 @@
+.full-card {
+    /* padding: 60px; */
+    margin-top: 25px;
+    border-radius: 6px;
+    margin: 18px;
+    color: white;
+    background-color: rgb(72, 67, 67);
+}
+
+.secondary-content {
+    padding: 25px;
+}
+
+.date-line {
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.primary-content h1 {
+    font-size: 75px;
+}

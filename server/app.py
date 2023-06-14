@@ -3,8 +3,9 @@
 # Standard library imports
 
 # Remote library imports
-from flask import request, session
+from flask import request, session, make_response
 from flask_restful import Resource
+from sqlalchemy import desc
 
 # Local imports
 from config import app, db, api
@@ -12,7 +13,69 @@ from models import User, Daily_Consumption, Drink_Type, Drink
 
 from sqlalchemy.exc import IntegrityError
 
+from datetime import date
+
 app.secret_key = b'Y\xf1Xz\x00\xad|eQ\x80t \xca\x1a\x10K'
+
+#Global functions
+def parse_date(datestring):
+    return date(int(datestring[:4]),int(datestring[5:7]),int(datestring[8:]))
+
+class Daily_Consumptions(Resource):
+
+    def get(self):
+        day_dict = [days.to_dict(only=("id", "date", "user_id", "consumption_goal", "ounces_consumed")) for days in Daily_Consumption.query.all()]
+
+        response = make_response(
+            day_dict,
+            200
+        )
+
+        return response
+    
+
+    def post(self):
+
+        new_day = Daily_Consumption(
+            date = parse_date(request.json["date"]),
+            user_id = request.json['user_id'],
+            consumption_goal = request.json['consumption_goal'],
+            ounces_consumed = request.json['ounces_consumed'],
+        )
+
+        db.session.add(new_day)
+        db.session.commit()
+
+        day_dict = new_day.to_dict()
+        
+        response = make_response(
+            day_dict,
+            201
+        )
+
+        return response
+        
+api.add_resource(Daily_Consumptions, '/daily_consumptions')
+
+class UserById(Resource):
+    def get(self, id):
+        user = User.query.filter_by(id=id).first()
+
+        if user:
+            return user.to_dict(only=("id", "email", "_password_hash", "first_name", "last_name")), 200
+        else:
+            return {'error': '404: User not found'}, 404
+        
+api.add_resource(UserById, '/users/<int:id>')
+
+
+class Daily_ConsumptionByUserId(Resource):
+    def get(self, id):
+
+        return [daily_consumption.to_dict(only=("id", "date", "user_id", "consumption_goal", "ounces_consumed")) for daily_consumption in Daily_Consumption.query.filter(Daily_Consumption.user_id == id).order_by(desc('date')).all()]
+    
+api.add_resource(Daily_ConsumptionByUserId, '/daily_consumptions/user/<int:id>')
+
 
 class Signup(Resource):
     

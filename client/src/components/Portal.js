@@ -1,22 +1,37 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import "./Portal.css";
 import NewDayForm from './NewDayForm'
 import MostRecentDay from './MostRecentDay'
 import DaysList from './DaysList'
+import water from '../water.mp4'
 
-function Portal() {
+function Portal({user}) {
+
+  const [userDailyConsumptions, setUserDailyConsumptions] = useState([])
+
+  useEffect(() => {
+    fetch(`/daily_consumptions/user/${user.id}`)
+    .then(r => r.json())
+    .then(data => {
+      setUserDailyConsumptions(data)
+      // console.log(data)
+      })
+  }, [])
+
   return (
     <div className='portal'>
-      {/* <h1 className='h1'>Portal</h1> */}
+      {/* <div className='overlay'></div> */}
+      {/* <video src={water} autoPlay loop muted /> */}
       <div className='left-panel'>
         <NewDayForm />
       </div>
       <div className='right-panel'>
         <div className='right-top'>
-           <MostRecentDay />
+          <MostRecentDay days={userDailyConsumptions}/>
         </div>
+        <h2>All Days</h2>
         <div className='right-bottom'>
-          <DaysList />
+          <DaysList days={userDailyConsumptions}/>
         </div>
       </div>
     </div>

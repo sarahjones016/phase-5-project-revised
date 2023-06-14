@@ -27,7 +27,7 @@ return (
     <Navbar setUser={setUser} user={user} />
     <Routes>
       <Route path='/' element={<Login />}></Route>
-      <Route path='/portal' element={<Portal />}></Route>
+      <Route path='/portal' element={<Portal user={user}/>}></Route>
       <Route path='/water-knowledge' element={<WaterKnowledge />}></Route>
     </Routes>
   </div>
