@@ -1,5 +1,5 @@
 .background {
-    font-family: "Montserrat";
+    font-family: "Roboto Condensed";
     width: 100%;
     height: 100vh;
 }
@@ -8,27 +8,27 @@
     width: 360px;
     height: 450px;
     margin: auto;
-    background-color: rgb(226, 225, 225);
+    background-color: #f3f3f2;
     border-radius: 3px;
 }
 
-h1 {
+.signup-box h1 {
     text-align: center;
     padding-top: 15px;
 }
 
-form {
+.signup-box form {
     width: 300px;
     margin-left: 20px;
 }
 
-form label {
+.signup-box form label {
     display: flex;
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
-form input {
+.signup-box form input {
     width: 100%;
     padding: 7px;
     border: 1px solid grey;
@@ -36,32 +36,34 @@ form input {
     outline: none;
 }
 
-.signup-btn {
+.submit-btn {
     width: 320px;
     height: 35px;
     margin-top: 20px;
     border: none;
-    background-color: aquamarine;
-    font-family: "Montserrat";
+    background-color: rgb(72, 67, 67);
+    font-family: "Roboto Condensed";
     font-size: 18px;
     border-radius: 6px;
+    color: white;
 }
 
 .para {
     text-align: center;
-    color: aquamarine;
+    color: rgb(72, 67, 67);
     font-size: 15px;
     margin-top: -10px;
 }
 
-.login-btn {
+.option-btn {
     margin-top: -10px;
     height: 21px;
     border: none;
-    background-color: aquamarine;
-    font-family: "Montserrat";
+    background-color: rgb(72, 67, 67);
+    font-family: "Roboto Condensed";
     font-size: 12px;
     border-radius: 6px;
+    color: white;
 }
 
 .outside-popup {

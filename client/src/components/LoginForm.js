@@ -28,26 +28,32 @@ function LoginForm({onLogin, setShowLogin}) {
   }
 
   return (
-    <div>
-    <form onSubmit={handleSubmit}>
-      <label>Email</label>
-        <input
-          type="text"
-          id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <label>Password</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-      <button type="submit">Log In</button>
-    </form>
-    <p className="registrationPrompt">Not yet sipping?</p>
-    <button onClick={() => setShowLogin(false)}>Sign Up</button>
+    <div className='background'>
+      <div className='login-box'>
+        <h1>Log In</h1>
+        <form onSubmit={handleSubmit}>
+          <label>Email</label>
+            <input
+              type="text"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <label>Password</label>
+              <input
+                type="password"
+                id="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+          <button className='submit-btn' type="submit">Log In</button>
+        </form> 
+      </div>
+      <div className='outside-popup'>
+        <p className="para">Not yet sipping? &nbsp;</p>
+        <button className='option-btn' onClick={() => setShowLogin(false)}>Sign Up</button>
+      </div>
+        
     </div>
   )
 }

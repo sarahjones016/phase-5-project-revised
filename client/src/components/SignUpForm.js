@@ -70,12 +70,12 @@ function SignUpForm({onLogin, setShowLogin}) {
               value={last_name}
               onChange={(e) => setLastName(e.target.value)}
             />
-          <button className='signup-btn' type="submit">Submit</button>
+          <button className='submit-btn' type="submit">Submit</button>
         </form>
       </div>
       <div className='outside-popup'>
         <p className='para'>Already sipping? &nbsp;</p>
-        <button className='login-btn' onClick={() => setShowLogin(true)}>Log In</button>
+        <button className='option-btn' onClick={() => setShowLogin(true)}>Log In</button>
       </div>
     </div>
     
