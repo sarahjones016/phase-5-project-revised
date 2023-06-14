@@ -1,0 +1,56 @@
+.hamburgerMenuDiv {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}
+
+.hamburgerMenuDiv svg {
+    color: black;
+}
+
+.navBar {
+    background-color: #f3f3f2;
+    text-align: left;
+    padding: 2%;
+    width: 25vw;
+    height: 100vh;
+}
+
+.options li {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 4%;
+}
+
+.options {
+  list-style: none;
+}
+
+.navButton {
+    text-align: left;
+    padding: 2%;
+    width: 25vw;
+}
+
+.navButtonTwo {
+    background-color: #f3f3f2;
+    text-align: left;
+    padding: 2%;
+    width: 25vw;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.logout-button{
+    width: 75px;
+    height: 30px;
+    border: none;
+    background-color: rgb(72, 67, 67);
+    font-family: "Roboto Condensed";
+    font-size: 18px;
+    border-radius: 6px;
+    color: white;
+}
