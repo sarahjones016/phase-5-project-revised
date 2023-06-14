@@ -8,19 +8,11 @@ function Login({onLogin}) {
 
   return (
     <div>
-      {showLogin ? (
-        <>
-          <LoginForm onLogin={onLogin} />
-          <p className="registrationPrompt">Don't have an account?</p>
-          <button onClick={() => setShowLogin(false)}>Sign Up</button>
-        </>
-      ) : (
-        <>
-          <SignUpForm onLogin={onLogin} />
-          <p>Already have an account?</p>
-          <button className="authButton" onClick={() => setShowLogin(true)}>Log In</button>
-        </>
-      )}
+      {showLogin ? 
+        (<LoginForm onLogin={onLogin} setShowLogin={setShowLogin}/>) 
+        : 
+        (<SignUpForm onLogin={onLogin} setShowLogin={setShowLogin}/>)
+      }
     </div>
   )
 }

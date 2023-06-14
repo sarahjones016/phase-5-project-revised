@@ -15,12 +15,12 @@ function Navbar({user, setUser}) {
   return (
     <div>
       <ul>
-        <li ><Link to='/'>Portal</Link></li>
+        <li ><Link to='/portal'>Portal</Link></li>
         <li><Link to='/water-knowledge'>Water Knowledge</Link></li>
         <li>
           {user ? (
             <div>
-                <button className='logout-button' onClick={handleLogoutClick}>Logout</button>
+                <button onClick={handleLogoutClick}>Logout</button>
             </div>
           ) : null}
         </li>

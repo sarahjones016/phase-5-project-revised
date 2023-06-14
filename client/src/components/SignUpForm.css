@@ -1,0 +1,71 @@
+.background {
+    font-family: "Montserrat";
+    width: 100%;
+    height: 100vh;
+}
+
+.signup-box {
+    width: 360px;
+    height: 450px;
+    margin: auto;
+    background-color: rgb(226, 225, 225);
+    border-radius: 3px;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 15px;
+}
+
+form {
+    width: 300px;
+    margin-left: 20px;
+}
+
+form label {
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+form input {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid grey;
+    border-radius: 6px;
+    outline: none;
+}
+
+.signup-btn {
+    width: 320px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: aquamarine;
+    font-family: "Montserrat";
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.para {
+    text-align: center;
+    color: aquamarine;
+    font-size: 15px;
+    margin-top: -10px;
+}
+
+.login-btn {
+    margin-top: -10px;
+    height: 21px;
+    border: none;
+    background-color: aquamarine;
+    font-family: "Montserrat";
+    font-size: 12px;
+    border-radius: 6px;
+}
+
+.outside-popup {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}

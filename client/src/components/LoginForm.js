@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { useNavigate } from "react-router-dom";
 import "./LoginForm.css";
 
-function LoginForm({onLogin}) {
+function LoginForm({onLogin, setShowLogin}) {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -28,23 +28,27 @@ function LoginForm({onLogin}) {
   }
 
   return (
+    <div>
     <form onSubmit={handleSubmit}>
-        <label>Email</label>
+      <label>Email</label>
+        <input
+          type="text"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <label>Password</label>
           <input
-            type="text"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
-          <label>Password</label>
-            <input
-              type="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-        <button type="submit">Log In</button>
-      </form>
+      <button type="submit">Log In</button>
+    </form>
+    <p className="registrationPrompt">Not yet sipping?</p>
+    <button onClick={() => setShowLogin(false)}>Sign Up</button>
+    </div>
   )
 }
 

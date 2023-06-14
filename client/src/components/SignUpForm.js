@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { useNavigate } from "react-router-dom";
 import "./SignUpForm.css";
 
-function SignUpForm({onLogin}) {
+function SignUpForm({onLogin, setShowLogin}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [first_name, setFirstName] = useState("");
@@ -27,7 +27,7 @@ function SignUpForm({onLogin}) {
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => onLogin(user));
-         navigate("/portal")
+        navigate("/portal")
       } else {
         r.json().then((err) => setErrors(err.errors));
       }
@@ -35,7 +35,10 @@ function SignUpForm({onLogin}) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className='background'>
+      <div className='signup-box'>
+        <h1>Sign Up</h1>
+        <form onSubmit={handleSubmit}>
         <label>Email</label>
           <input
             type="text"
@@ -67,8 +70,15 @@ function SignUpForm({onLogin}) {
               value={last_name}
               onChange={(e) => setLastName(e.target.value)}
             />
-        <button type="submit">Sign Up</button>
-      </form>
+          <button className='signup-btn' type="submit">Submit</button>
+        </form>
+      </div>
+      <div className='outside-popup'>
+        <p className='para'>Already sipping? &nbsp;</p>
+        <button className='login-btn' onClick={() => setShowLogin(true)}>Log In</button>
+      </div>
+    </div>
+    
   )
 }
 
