@@ -1,0 +1,14 @@
+.half-card {
+    display: flex;
+    justify-content: center;
+    padding: 10px;;
+    background-color: rgb(72, 67, 67);
+    margin: 18px;
+    color: white;
+    border-radius: 6px;
+}
+
+.detail {
+    padding: 10px;
+    font-size: 18px;
+}

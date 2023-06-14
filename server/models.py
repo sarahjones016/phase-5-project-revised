@@ -13,6 +13,8 @@ class User(db.Model, SerializerMixin):
 
     daily_consumptions = db.relationship("Daily_Consumption", backref="user")
 
+    serialize_rules = ('-daily_consumptions.user',)
+
     @hybrid_property
     def password_hash(self):
         raise Exception('Password hashes may not be viewed.')
@@ -38,6 +40,9 @@ class Daily_Consumption(db.Model, SerializerMixin):
 
     drinks = db.relationship("Drink", backref="daily_consumption")
 
+    serialize_rules = ('-user.daily_consumptions', '-drinks.daily_consumption',)
+
+
 class Drink(db.Model, SerializerMixin):
     __tablename__ = 'drinks'
     id = db.Column(db.Integer, primary_key=True)
@@ -46,11 +51,15 @@ class Drink(db.Model, SerializerMixin):
     daily_consumption_id = db.Column(db.Integer, db.ForeignKey('daily_consumptions.id'))
     drink_type_id = db.Column(db.Integer, db.ForeignKey('drink_types.id'))
 
+    serialize_rules = ('-daily_consumption.drinks', '-drink_type.drinks')
+
 class Drink_Type(db.Model, SerializerMixin):
     __tablename__ = 'drink_types'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
 
     drinks = db.relationship("Drink", backref="drink_type")
+
+    serialize_rules = ('-drinks.drink_type',)
 
 # Models go here!
