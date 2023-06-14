@@ -1,3 +1,31 @@
-.h1 {
+/* .h1 {
     text-align: center;
+} */
+
+.portal {
+    display: flex;
+    height: 99vh;
+    width: 100%;
+}
+
+.left-panel {
+    flex: 50;
+    padding-left: 3.5rem;
+    text-align: center;
+  }
+  
+.right-panel {
+flex: 50;
+padding-right: 3.5rem;
+text-align: center;
+display: flex;
+flex-direction: column
+}
+
+.right-top {
+    flex: 50;
+}
+
+.right-bottom {
+    flex: 50;
 }
