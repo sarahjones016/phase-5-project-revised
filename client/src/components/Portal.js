@@ -4,7 +4,6 @@ import NewDayForm from './NewDayForm'
 import MostRecentDay from './MostRecentDay'
 import DaysList from './DaysList'
 import water from '../water.mp4'
-import ModalContainer from './ModalContainer';
 
 function Portal({user}) {
 
@@ -44,14 +43,14 @@ function Portal({user}) {
             </div>
             <div className='right-panel'>
               <div className='right-top'>
-                <MostRecentDay handleAddDrinkClick={handleAddDrinkClick} days={userDailyConsumptions}/>
+                <MostRecentDay showModal={showModal} handleCloseClick={handleCloseClick} handleAddDrinkClick={handleAddDrinkClick} days={userDailyConsumptions}/>
               </div>
               <h2>All Days</h2>
               <div className='right-bottom'>
                 <DaysList days={userDailyConsumptions}/>
               </div>
         </div>
-        {showModal ? <ModalContainer handleCloseClick={handleCloseClick}/> : null}
+        
       </div>
      
       </div>
