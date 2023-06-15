@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import "./ModalContainer.css";
 import { AiFillCloseSquare } from "react-icons/ai";
 import { IconContext } from "react-icons";
@@ -7,6 +7,7 @@ function ModalContainer({handleCloseClick, day}) {
 
   const [drinkType, setDrinkType] = useState("")
   const [amount, setAmount] = useState("")
+  // const [data, setData] = useState(day)
   
 
   function handleNewDrinkSubmit(e) {
@@ -25,6 +26,19 @@ function ModalContainer({handleCloseClick, day}) {
       }),
     })
     .then((res) => res.json())
+    .then((data) => console.log(data))
+
+  
+    fetch(`/daily_consumptions/${day.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "Application/json"
+      },
+      body: JSON.stringify({
+        ounces_consumed: parseInt(day.ounces_consumed) + parseInt(amount)
+      })
+    })
+    // .then((res) => res.json())
     .then((data) => console.log(data))
   }
 
