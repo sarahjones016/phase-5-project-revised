@@ -32,6 +32,13 @@ function Portal({user}) {
     setShowModal(!showModal)
   }
 
+  function onUpdateDay(updatedDay) {
+    const updatedDays = userDailyConsumptions.map((day) =>
+      day.id === updatedDay.id ? updatedDay : day
+    );
+    setUserDailyConsumptions(updatedDays);
+  }
+
   return (
     <div className='portal'>
       <div className='overlay'></div>
@@ -43,7 +50,7 @@ function Portal({user}) {
             </div>
             <div className='right-panel'>
               <div className='right-top'>
-                <MostRecentDay showModal={showModal} handleCloseClick={handleCloseClick} handleAddDrinkClick={handleAddDrinkClick} days={userDailyConsumptions}/>
+                <MostRecentDay onUpdateDay={onUpdateDay} showModal={showModal} handleCloseClick={handleCloseClick} handleAddDrinkClick={handleAddDrinkClick} days={userDailyConsumptions}/>
               </div>
               <h2>All Days</h2>
               <div className='right-bottom'>

@@ -2,7 +2,7 @@ import React from 'react'
 import "./MostRecentDay.css";
 import DayFullCard from './DayFullCard';
 
-function MostRecentDay({days, handleAddDrinkClick, handleCloseClick, showModal}) {
+function MostRecentDay({days, handleAddDrinkClick, handleCloseClick, showModal, onUpdateDay}) {
 
   // const recentDay = days[0]
 
@@ -15,7 +15,7 @@ function MostRecentDay({days, handleAddDrinkClick, handleCloseClick, showModal})
       <h2>Most Recent Day</h2>
         {days.map((day, index) => {
             if (index < 1) {
-              return <DayFullCard showModal={showModal} handleCloseClick={handleCloseClick} handleAddDrinkClick={handleAddDrinkClick} key={day.date} day={day}/>
+              return <DayFullCard onUpdateDay={onUpdateDay} showModal={showModal} handleCloseClick={handleCloseClick} handleAddDrinkClick={handleAddDrinkClick} key={day.date} day={day}/>
             }
           })}
       </div>
