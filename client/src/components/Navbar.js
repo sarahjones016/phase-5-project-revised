@@ -38,8 +38,8 @@ function Navbar({user, setUser}) {
     
     {showNavBar ? <div className='navBar'>
         <ul onClick={handleNavClick} className='options'>
-        <li ><Link to='/portal'>Portal</Link></li>
-        <li><Link to='/water-knowledge'>Water Knowledge</Link></li>
+        <li ><Link to='/dashboard'>Dashboard</Link></li>
+        <li><Link to='/faq'>FAQ</Link></li>
         <li>
           {user ? (
             <div>

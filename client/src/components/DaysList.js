@@ -4,7 +4,7 @@ import DayHalfCard from './DayHalfCard'
 
 function DaysList({days}) {
 
-  console.log(days)
+  // console.log(days)
 
   return (
     <div>

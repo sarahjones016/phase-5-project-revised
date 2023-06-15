@@ -36,10 +36,10 @@ video {
 }
 
 .left-panel {
-    flex: 50;
+    flex: 40;
     text-align: center;
     border-radius: 6px;
-    margin: 15px;
+    margin: 45px;
     background-color: #f3f3f2;
     margin-left: 40px;
     /* position: absolute; */
@@ -47,22 +47,26 @@ video {
   }
   
 .right-panel {
-    flex: 50;
+    flex: 60;
     text-align: center;
     display: flex;
     flex-direction: column;
     background-color: #f3f3f2;
     border-radius: 6px;
-    margin: 15px;
+    margin: 45px;
     /* position: absolute; */
 }
 
 .right-top {
     flex: 60;
     padding-top: 20px;
+    background-color: #f3f3f2;
+    border-radius: 6px;
 }
 
 .right-bottom {
     flex: 40;
     overflow-y: scroll;
+    background-color: #f3f3f2;
+    border-radius: 6px;
 }

@@ -20,3 +20,14 @@
 .primary-content h1 {
     font-size: 75px;
 }
+
+.add-new-drink-btn {
+    width: 100px;
+    height: 20px;
+    border: none;
+    background-color: #6b7f88;
+    font-family: "Roboto Condensed";
+    /* font-size: 18px; */
+    border-radius: 6px;
+    color: white;
+}
