@@ -1,0 +1,67 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-inner {
+    position: relative;
+    padding: 32px;
+    height: 350px;
+    width: 350px;
+    /* max-width: 640px; */
+    background-color: #f3f3f2;
+
+}
+
+.popup-inner .close-btn-div {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.popup-inner form label {
+    display: flex;
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.popup-inner form input {
+    width: 95%;
+    padding: 7px;
+    border: 1px solid grey;
+    border-radius: 6px;
+    outline: none;
+}
+
+.popup-inner form select {
+    /* width: 95%; */
+    padding: 7px;
+    border: 1px solid grey;
+    border-radius: 6px;
+    outline: none;
+}
+
+.popup-inner h2 {
+    padding-top: 25px;
+}
+
+.new-drink-btn {
+    width: 75px;;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: #011325;
+    font-family: "Roboto Condensed";
+    font-size: 16px;
+    border-radius: 6px;
+    color: white;
+}
