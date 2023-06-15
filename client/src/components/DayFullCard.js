@@ -7,7 +7,7 @@ function DayFullCard({day}) {
       <div className='full-card'>
         <div className='date-line'>
           <p>{day.date}</p>
-          <button>Add A New Drink</button>
+          <button className='add-new-drink-btn'>Add A New Drink</button>
         </div>
         <div className='primary-content'>
           <h1>{Math.round((day.ounces_consumed / day.consumption_goal)*100)}%</h1>

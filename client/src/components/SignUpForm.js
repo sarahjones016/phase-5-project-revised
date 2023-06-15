@@ -29,7 +29,7 @@ function SignUpForm({onLogin, setShowLogin}) {
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => onLogin(user));
-        navigate("/portal")
+        navigate("/dashboard")
       } else {
         r.json().then((err) => setErrors(err.errors));
       }

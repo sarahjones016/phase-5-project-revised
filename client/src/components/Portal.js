@@ -18,6 +18,10 @@ function Portal({user}) {
       })
   }, [])
 
+  function handleNewDayFormSubmit(newDay) {
+    setUserDailyConsumptions([newDay, ...userDailyConsumptions])
+  }
+
   return (
     <div className='portal'>
       <div className='overlay'></div>
@@ -25,7 +29,7 @@ function Portal({user}) {
       <div className='main'>
         <div className='panels'> 
             <div className='left-panel'>
-              <NewDayForm />
+              <NewDayForm onFormSubmit={handleNewDayFormSubmit} user={user}/>
             </div>
             <div className='right-panel'>
               <div className='right-top'>
