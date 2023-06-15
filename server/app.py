@@ -91,6 +91,44 @@ class Drinks(Resource):
     
 api.add_resource(Drinks, '/drinks')
 
+class Daily_ConsumptionsByID(Resource):
+    
+    def get(self, id):
+        day = Daily_Consumption.query.filter_by(id = id).first()
+
+  
+        day_dict = day.to_dict(only=("id", "date", "user_id", "consumption_goal", "ounces_consumed"))
+
+        response = make_response(
+            day_dict,
+            200
+        )
+
+        return response
+    
+
+    def patch(self, id):
+
+        daily_consumption = Daily_Consumption.query.filter_by(id = id).first()
+
+        for attr in request.json:
+            
+            setattr(daily_consumption, attr, request.json[attr])
+
+            db.session.add(daily_consumption)
+            db.session.commit()
+
+            daily_consumption_dict = daily_consumption.to_dict(only=("id", "date", "user_id", "consumption_goal", "ounces_consumed"))
+
+            response = make_response(
+                daily_consumption_dict,
+                202
+            )
+
+        return response
+
+api.add_resource(Daily_ConsumptionsByID, '/daily_consumptions/<int:id>')
+
 class UserById(Resource):
     def get(self, id):
         user = User.query.filter_by(id=id).first()
