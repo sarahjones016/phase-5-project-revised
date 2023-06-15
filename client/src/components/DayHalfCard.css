@@ -1,9 +1,11 @@
 .half-card {
     display: flex;
     justify-content: center;
-    padding: 10px;;
+    padding: 5px;;
     background-color: #011325;
-    margin: 18px;
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-top: 10px;
     color: white;
     border-radius: 6px;
 }

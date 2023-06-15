@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import { useNavigate } from "react-router-dom";
 import "./SignUpForm.css";
+import water from '../water.mp4'
+
 
 function SignUpForm({onLogin, setShowLogin}) {
   const [email, setEmail] = useState("");
@@ -36,6 +38,8 @@ function SignUpForm({onLogin, setShowLogin}) {
 
   return (
     <div className='background'>
+      <div className='overlay'></div>
+      <video src={water} autoPlay loop muted />
       <div className='signup-box'>
         <h1>Sign Up</h1>
         <form onSubmit={handleSubmit}>
@@ -72,11 +76,12 @@ function SignUpForm({onLogin, setShowLogin}) {
             />
           <button className='submit-btn' type="submit">Submit</button>
         </form>
-      </div>
       <div className='outside-popup'>
         <p className='para'>Already sipping? &nbsp;</p>
         <button className='option-btn' onClick={() => setShowLogin(true)}>Log In</button>
       </div>
+      </div>
+      
     </div>
     
   )
