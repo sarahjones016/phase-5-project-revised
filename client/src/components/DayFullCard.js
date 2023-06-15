@@ -1,13 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./DayFullCard.css";
 
-function DayFullCard({day}) {
+function DayFullCard({day, handleAddDrinkClick}) {
+
   return (
     <div>
       <div className='full-card'>
         <div className='date-line'>
           <p>{day.date}</p>
-          <button className='add-new-drink-btn'>Add A New Drink</button>
+          <button className='add-new-drink-btn' onClick={handleAddDrinkClick}>Add A New Drink</button>
         </div>
         <div className='primary-content'>
           <h1>{Math.round((day.ounces_consumed / day.consumption_goal)*100)}%</h1>
@@ -17,7 +18,6 @@ function DayFullCard({day}) {
           <p>Daily Goal: {day.consumption_goal}oz</p>
           <p>Currently Consumed: {day.ounces_consumed}oz</p>
         </div>
-        
       </div>
       
     </div>

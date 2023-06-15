@@ -4,10 +4,12 @@ import NewDayForm from './NewDayForm'
 import MostRecentDay from './MostRecentDay'
 import DaysList from './DaysList'
 import water from '../water.mp4'
+import ModalContainer from './ModalContainer';
 
 function Portal({user}) {
 
   const [userDailyConsumptions, setUserDailyConsumptions] = useState([])
+  const [showModal, setShowModal] = useState(false)
 
   useEffect(() => {
     fetch(`/daily_consumptions/user/${user.id}`)
@@ -22,6 +24,15 @@ function Portal({user}) {
     setUserDailyConsumptions([newDay, ...userDailyConsumptions])
   }
 
+  function handleAddDrinkClick() {
+    // console.log("add new drink has been clicked")
+    setShowModal(!showModal)
+  }
+
+  function handleCloseClick() {
+    setShowModal(!showModal)
+  }
+
   return (
     <div className='portal'>
       <div className='overlay'></div>
@@ -33,13 +44,14 @@ function Portal({user}) {
             </div>
             <div className='right-panel'>
               <div className='right-top'>
-                <MostRecentDay days={userDailyConsumptions}/>
+                <MostRecentDay handleAddDrinkClick={handleAddDrinkClick} days={userDailyConsumptions}/>
               </div>
               <h2>All Days</h2>
               <div className='right-bottom'>
                 <DaysList days={userDailyConsumptions}/>
               </div>
         </div>
+        {showModal ? <ModalContainer handleCloseClick={handleCloseClick}/> : null}
       </div>
      
       </div>
