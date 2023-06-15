@@ -3,14 +3,29 @@ import "./ModalContainer.css";
 import { AiFillCloseSquare } from "react-icons/ai";
 import { IconContext } from "react-icons";
 
-function ModalContainer({handleCloseClick}) {
+function ModalContainer({handleCloseClick, day}) {
 
   const [drinkType, setDrinkType] = useState("")
   const [amount, setAmount] = useState("")
+  
 
   function handleNewDrinkSubmit(e) {
     e.preventDefault();
     console.log("submit button clicked")
+
+    fetch("/drinks", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        daily_consumption_id: day.id,
+        drink_type_id: drinkType,
+        ounces: amount,
+      }),
+    })
+    .then((res) => res.json())
+    .then((data) => console.log(data))
   }
 
   return (
@@ -33,12 +48,12 @@ function ModalContainer({handleCloseClick}) {
             onChange={(e) => setDrinkType(e.target.value)}
           >
               <option value="default">Select Drink</option>
-              <option value="water">Water</option>
-              <option value="sports-drink">Sports Drink</option>
-              <option value="milk">Milk</option>
-              <option value="juice">Juice</option>
-              <option value="herbal-tea">Herbal Tea</option>
-              <option value="other">Other Water-Based Drink</option>
+              <option value="1">Water</option>
+              <option value="2">Sports Drink</option>
+              <option value="3">Milk</option>
+              <option value="4">Juice</option>
+              <option value="5">Herbal Tea</option>
+              <option value="6">Other Water-Based Drink</option>
           </select>
           <label>Amount (oz)</label>
           <input

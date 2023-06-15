@@ -57,6 +57,40 @@ class Daily_Consumptions(Resource):
         
 api.add_resource(Daily_Consumptions, '/daily_consumptions')
 
+class Drinks(Resource):
+
+    def get(self):
+        drink_dict = [drinks.to_dict(only=("daily_consumption_id", "drink_type_id", "ounces")) for drinks in Drink.query.all()]
+
+        response = make_response(
+            drink_dict,
+            200
+        )
+
+        return response
+
+    def post(self):
+
+        new_drink = Drink(
+            daily_consumption_id = request.json["daily_consumption_id"],
+            drink_type_id = request.json['drink_type_id'],
+            ounces = request.json['ounces'],
+        )
+
+        db.session.add(new_drink)
+        db.session.commit()
+
+        drink_dict = new_drink.to_dict(only=("daily_consumption_id", "drink_type_id", "ounces"))
+        
+        response = make_response(
+            drink_dict,
+            201
+        )
+
+        return response
+    
+api.add_resource(Drinks, '/drinks')
+
 class UserById(Resource):
     def get(self, id):
         user = User.query.filter_by(id=id).first()

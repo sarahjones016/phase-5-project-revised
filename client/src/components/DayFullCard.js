@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import "./DayFullCard.css";
+import ModalContainer from './ModalContainer';
 
-function DayFullCard({day, handleAddDrinkClick}) {
+function DayFullCard({day, handleAddDrinkClick, handleCloseClick, showModal}) {
 
   return (
     <div>
@@ -19,7 +20,7 @@ function DayFullCard({day, handleAddDrinkClick}) {
           <p>Currently Consumed: {day.ounces_consumed}oz</p>
         </div>
       </div>
-      
+      {showModal ? <ModalContainer day={day} handleCloseClick={handleCloseClick}/> : null}
     </div>
   )
 }
