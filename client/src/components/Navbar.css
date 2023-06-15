@@ -1,6 +1,6 @@
 .hamburgerMenuDiv {
     position: fixed;
-    z-index: 10;
+    z-index: 3;
     top: 0;
 }
 
