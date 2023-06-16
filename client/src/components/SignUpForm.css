@@ -1,7 +1,3 @@
-* {
-    color:#011325;
-}
-
 .background {
     font-family: "Roboto Condensed";
     width: 100%;
@@ -25,6 +21,7 @@
 .signup-box h1 {
     text-align: center;
     padding-top: 15px;
+    color: #011325;
 }
 
 .signup-box form {
@@ -36,6 +33,7 @@
     display: flex;
     margin-top: 20px;
     font-size: 16px;
+    color: #011325;
 }
 
 .signup-box form input {
@@ -110,5 +108,5 @@ video {
 
 .logo-name {
     text-align: center;
-    
+
 }
