@@ -64,6 +64,7 @@ function SignUpForm({onLogin, setShowLogin}) {
             <input
               type="text"
               id="first_name"
+              required
               value={first_name}
               onChange={(e) => setFirstName(e.target.value)}
             />
@@ -71,6 +72,7 @@ function SignUpForm({onLogin, setShowLogin}) {
             <input
               type="text"
               id="last_name"
+              required
               value={last_name}
               onChange={(e) => setLastName(e.target.value)}
             />

@@ -25,6 +25,9 @@ function NewDayForm({user, onFormSubmit}) {
     // .then((res) => console.log(res))
     .then((res) => res.json())
     .then((data) => onFormSubmit(data))
+
+    setDate("")
+    setConsumptionGoal("")
   }
 
   return (

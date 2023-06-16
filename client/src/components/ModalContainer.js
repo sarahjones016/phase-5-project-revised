@@ -7,38 +7,44 @@ function ModalContainer({handleCloseClick, day, onUpdateDay}) {
 
   const [drinkType, setDrinkType] = useState("")
   const [amount, setAmount] = useState("")
+  const [errors, setErrors] = useState([]);
   
 
   function handleNewDrinkSubmit(e) {
     e.preventDefault();
     console.log("submit button clicked")
 
-    fetch("/drinks", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        daily_consumption_id: day.id,
-        drink_type_id: drinkType,
-        ounces: amount,
-      }),
-    })
-    .then((res) => res.json())
-    .then((data) => onUpdateDay(data))
+    if (drinkType === "") {
+      setErrors("Select a drink type")
+    } else {
+     fetch("/drinks", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              daily_consumption_id: day.id,
+              drink_type_id: drinkType,
+              ounces: amount,
+            }),
+          })
+          .then((res) => res.json())
+          .then((data) => {
+            onUpdateDay(data)
+          })
 
-  
-    fetch(`/daily_consumptions/${day.id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "Application/json"
-      },
-      body: JSON.stringify({
-        ounces_consumed: parseInt(day.ounces_consumed) + parseInt(amount)
-      })
-    })
-    .then((res) => res.json())
-    .then(onUpdateDay)
+          fetch(`/daily_consumptions/${day.id}`, {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "Application/json"
+            },
+            body: JSON.stringify({
+              ounces_consumed: parseInt(day.ounces_consumed) + parseInt(amount)
+            })
+          })
+          .then((res) => res.json())
+          .then(onUpdateDay)
+    }
   }
 
   return (
@@ -77,6 +83,7 @@ function ModalContainer({handleCloseClick, day, onUpdateDay}) {
             onChange={(e) => setAmount(e.target.value)}
           />
           <button className='new-drink-btn'>Add Drink</button>
+          <p className='login-error'>{errors}</p>
         </form>
       </div>
       

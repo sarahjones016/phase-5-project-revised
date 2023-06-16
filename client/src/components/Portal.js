@@ -37,6 +37,7 @@ function Portal({user}) {
       day.id === updatedDay.id ? updatedDay : day
     );
     setUserDailyConsumptions(updatedDays);
+    handleCloseClick()
   }
 
   return (
