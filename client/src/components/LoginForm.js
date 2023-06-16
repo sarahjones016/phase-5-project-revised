@@ -23,7 +23,7 @@ function LoginForm({onLogin, setShowLogin}) {
         r.json().then((user) => onLogin(user));
          navigate("/dashboard")
       } else {
-        r.json().then((err) => setErrors(err.errors));
+        r.json().then((err) => setErrors("Email or password is incorrect"));
       }
     });
   }
@@ -50,11 +50,13 @@ function LoginForm({onLogin, setShowLogin}) {
                 onChange={(e) => setPassword(e.target.value)}
               />
           <button className='submit-btn' type="submit">Log In</button>
+          <p className='login-error'>{errors}</p>
         </form> 
       <div className='outside-popup'>
         <p className="para">Not yet sipping? &nbsp;</p>
         <button className='option-btn' onClick={() => setShowLogin(false)}>Sign Up</button>
       </div>
+      
       </div>
       
         
