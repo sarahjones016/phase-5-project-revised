@@ -1,3 +1,7 @@
+* {
+    color:#011325;
+}
+
 .background {
     font-family: "Roboto Condensed";
     width: 100%;
@@ -10,7 +14,7 @@
 
 .login-box {
     width: 360px;
-    height: 375px;
+    height: 500px;
     margin: auto;
     background-color: #f3f3f2;
     border-radius: 3px;
@@ -104,4 +108,17 @@ video {
     justify-content: center;
     text-align: center;
     margin: 15px;
+}
+
+.logo-box {
+    padding: 25px;
+}
+
+.logo-holder {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-name {
+    text-align: center;
 }

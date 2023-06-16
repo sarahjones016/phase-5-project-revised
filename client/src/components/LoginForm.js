@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import { useNavigate } from "react-router-dom";
 import "./LoginForm.css";
 import water from '../water.mp4'
+import { MdWaterDrop } from "react-icons/md";
+import { IconContext } from "react-icons";
 
 function LoginForm({onLogin, setShowLogin}) {
 
@@ -33,6 +35,15 @@ function LoginForm({onLogin, setShowLogin}) {
       <div className='overlay'></div>
       <video src={water} autoPlay loop muted />
       <div className='login-box'>
+        <div className='logo-box'>
+          <div className='logo-holder'>
+          <IconContext.Provider className='logo' value={{ size: "50px", color: "011325"}}>
+            <MdWaterDrop/>
+        </IconContext.Provider>   
+        </div>   
+        <p className='logo-name'>Sip</p>
+        </div>
+        
         <h1>Log In</h1>
         <form onSubmit={handleSubmit}>
           <label>Email</label>
