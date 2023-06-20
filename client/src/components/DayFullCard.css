@@ -13,7 +13,7 @@
 }
 
 .secondary-content {
-    padding: 25px;
+    padding: 50px;
 }
 
 .date-line {
@@ -22,13 +22,21 @@
     justify-content: space-between;
 }
 
+.primary-content-div {
+    display: flex;
+    justify-content: center;
+}
+
 .primary-content {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    width: 70%;
 }
 
 .primary-content h1 {
     font-size: 15vh;
+    line-height: .95;
 }
 
 .primary-content p {
@@ -60,8 +68,8 @@
 
 .cup {
     transform: translate(0%, 0%);
-    width: 150px;
-    height: 180px;
+    width: 15vh;
+    height: 18vh;
     border-top: 2px solid transparent;
     border-radius: 15px;
     border-top-left-radius: 5px;
@@ -76,11 +84,11 @@
 .cup::before {
     content: '';
     position: absolute;
-    width: 50px;
-    height: 80px;
+    width: 5vh;
+    height: 8vh;
     border: 6px solid #fff;
-    right: -68px;
-    top: 30px;
+    right: -6.8vh;
+    top: 3vh;
     border-top-right-radius: 35px;
     border-bottom-right-radius: 35px;
 }
@@ -163,6 +171,7 @@
     background-color: #1b95e0;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    /* animation: animate 4s ease-in-out infinite; */
 }
 
 .filler-100 {
@@ -172,3 +181,15 @@
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
+
+/* @keyframes animate 
+{
+    0%, 100% 
+    {
+        clip-path: polygon(1% 46%, 6% 41%, 9% 36%, 15% 32%, 24% 30%, 31% 30%, 40% 29%, 47% 33%, 53% 38%, 57% 44%, 64% 47%, 71% 51%, 80% 51%, 87% 50%, 92% 46%, 96% 40%, 100% 35%, 100% 99%, 0% 98%);
+    }
+    50%
+    {
+        clip-path: polygon(0 51%, 4% 57%, 15% 59%, 25% 58%, 32% 55%, 38% 49%, 44% 42%, 49% 40%, 55% 37%, 61% 39%, 68% 40%, 75% 42%, 81% 47%, 87% 50%, 92% 53%, 100% 60%, 100% 100%, 0% 98%);
+    }
+} */

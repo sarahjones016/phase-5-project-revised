@@ -42,6 +42,7 @@ video {
     margin: 45px;
     background-color: #f3f3f2;
     margin-left: 40px;
+    overflow-y: scroll;
     /* position: absolute; */
     /* margin-bottom: 0px; */
   }

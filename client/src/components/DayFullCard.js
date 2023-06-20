@@ -22,9 +22,9 @@ function DayFullCard({day, handleAddDrinkClick, handleCloseClick, showModal, onU
       setCupHeight("filler-60")
     } else if (Math.round((day.ounces_consumed / day.consumption_goal)*100) >= 61 && Math.round((day.ounces_consumed / day.consumption_goal)*100) <= 70){
       setCupHeight("filler-70")
-    } else if (Math.round((day.ounces_consumed / day.consumption_goal)*100) >= 71 && Math.round((day.ounces_consumed / day.consumption_goal)*100) <= 80){
+    } else if (Math.round((day.ounces_consumed / day.consumption_goal)*100) >= 71 && Math.round((day.ounces_consumed / day.consumption_goal)*100) <= 84){
       setCupHeight("filler-80")
-    } else if (Math.round((day.ounces_consumed / day.consumption_goal)*100) >= 81 && Math.round((day.ounces_consumed / day.consumption_goal)*100) <= 99){
+    } else if (Math.round((day.ounces_consumed / day.consumption_goal)*100) >= 85 && Math.round((day.ounces_consumed / day.consumption_goal)*100) <= 99){
       setCupHeight("filler-90")
     } else if (Math.round((day.ounces_consumed / day.consumption_goal)*100) >= 100){
       setCupHeight("filler-100")
@@ -38,7 +38,8 @@ function DayFullCard({day, handleAddDrinkClick, handleCloseClick, showModal, onU
           <p>{day.date}</p>
           <button className='add-new-drink-btn' onClick={handleAddDrinkClick}>Add A New Drink</button>
         </div>
-        <div className='primary-content'>
+        <div className='primary-content-div'>
+          <div className='primary-content'>
           <div className='cup-div'>
             <div className='cup'>
               <div className={cupHeight}></div>
@@ -49,6 +50,8 @@ function DayFullCard({day, handleAddDrinkClick, handleCloseClick, showModal, onU
             <p>of daily goal completed</p>
           </div>
         </div>
+        </div>
+        
         <div className='secondary-content'>
           <p>Daily Goal: {day.consumption_goal}oz</p>
           <p>Currently Consumed: {day.ounces_consumed}oz</p>
