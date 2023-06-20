@@ -68,8 +68,8 @@
 
 .cup {
     transform: translate(0%, 0%);
-    width: 15vh;
-    height: 18vh;
+    width: 150px;
+    height: 180px;
     border: 6px solid #011325;
     border-top: 2px solid transparent;
     border-radius: 15px;
@@ -85,10 +85,10 @@
 .cup::before {
     content: '';
     position: absolute;
-    width: 5vh;
-    height: 8vh;
+    width: 50px;
+    height: 80px;
     border: 6px solid #fff;
-    right: -6.9vh;
+    right: -69px;
     top: 3vh;
     border-top-right-radius: 35px;
     border-bottom-right-radius: 35px;
