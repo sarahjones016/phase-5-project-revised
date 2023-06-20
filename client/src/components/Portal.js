@@ -9,6 +9,7 @@ function Portal({user}) {
 
   const [userDailyConsumptions, setUserDailyConsumptions] = useState([])
   const [showModal, setShowModal] = useState(false)
+  const [cupHeight, setCupHeight] = useState("filler-0")
 
   useEffect(() => {
     fetch(`/daily_consumptions/user/${user.id}`)
@@ -37,6 +38,7 @@ function Portal({user}) {
       day.id === updatedDay.id ? updatedDay : day
     );
     setUserDailyConsumptions(updatedDays);
+    // setCupHeight(cupHeight)
     handleCloseClick()
   }
 
@@ -51,7 +53,7 @@ function Portal({user}) {
             </div>
             <div className='right-panel'>
               <div className='right-top'>
-                <MostRecentDay onUpdateDay={onUpdateDay} showModal={showModal} handleCloseClick={handleCloseClick} handleAddDrinkClick={handleAddDrinkClick} days={userDailyConsumptions}/>
+                <MostRecentDay cupHeight={cupHeight} setCupHeight={setCupHeight} onUpdateDay={onUpdateDay} showModal={showModal} handleCloseClick={handleCloseClick} handleAddDrinkClick={handleAddDrinkClick} days={userDailyConsumptions}/>
               </div>
               <h2>All Days</h2>
               <div className='right-bottom'>
