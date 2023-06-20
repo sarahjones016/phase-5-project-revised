@@ -5,7 +5,7 @@ import ModalContainer from './ModalContainer';
 function DayFullCard({day, handleAddDrinkClick, handleCloseClick, showModal, onUpdateDay}) {
 
   return (
-    <div>
+    <div className='height-div'>
       <div className='full-card'>
         <div className='date-line'>
           <p>{day.date}</p>

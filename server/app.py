@@ -15,8 +15,6 @@ from sqlalchemy.exc import IntegrityError
 
 from datetime import date
 
-app.secret_key = b'Y\xf1Xz\x00\xad|eQ\x80t \xca\x1a\x10K'
-
 #Global functions
 def parse_date(datestring):
     return date(int(datestring[:4]),int(datestring[5:7]),int(datestring[8:]))
