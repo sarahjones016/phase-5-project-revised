@@ -68,3 +68,25 @@ h2 {
 li {
     margin-left: 45px;
 }
+
+.weather-container {
+    background-color: #2d525a;
+    padding: 25px;
+    color: white;
+    border-radius: 6px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.weather-container .response {
+    margin-top: 25px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+}
+
+.input p {
+    margin-right: 10px;
+}
