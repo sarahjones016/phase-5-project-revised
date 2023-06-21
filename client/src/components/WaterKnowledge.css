@@ -87,6 +87,10 @@ li {
     align-items: center;
 }
 
+.error {
+    font-style: italic;
+}
+
 .input p {
     margin-right: 10px;
 }
