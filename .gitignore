@@ -53,5 +53,4 @@ jspm_packages
 server/instance
 server/__pycache__
 
-app.secret_key = b'\xd2\xbd[;\x18\xde\xcf\xe7w\xf9\xf3\x92\x14\xa6\xa5C'
-
+.env
