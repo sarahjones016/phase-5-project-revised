@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import "./WaterKnowledge.css";
 import water from '../water.mp4'
-// import REACT_APP_API_KEY from './.env'
 
 function WaterKnowledge() {
 
@@ -14,23 +13,34 @@ const [temp, setTemp] = useState("")
 const [feelsLikeTemp, setFeelsLikeTemp] = useState("")
 const [condition, setCondition] = useState("")
 const [showWeatherOutput, setShowWeatherOutput] = useState(false)
+const [errors, setErrors] = useState([]);
 
 function handleWeatherSubmit(e) {
   e.preventDefault();
   console.log(zipCode)
 
   fetch(`http://api.weatherapi.com/v1/current.json?key=${MY_KEY}&q=${zipCode}&aqi=no`)
-  .then(r => r.json())
-  .then(data => {
-    setTemp(data.current.temp_f)
-    setFeelsLikeTemp(data.current.feelslike_f)
-    setCondition(data.current.condition.text.toLowerCase())
-    setCity(data.location.name)
-    setState(data.location.region)
-    })
-
-    setShowWeatherOutput(!showWeatherOutput)
-    
+  .then((r) => {
+    if (r.ok) {
+      r.json().then((data) => {
+        setTemp(data.current.temp_f)
+        setFeelsLikeTemp(data.current.feelslike_f)
+        setCondition(data.current.condition.text.toLowerCase())
+        setCity(data.location.name)
+        setState(data.location.region)
+        setErrors("")
+      });
+      
+    } else {
+      // setShowWeatherOutput(!showWeatherOutput)
+      r.json().then((err) => setErrors("Zip code was not be found. Please provide another zip code in your region."));
+      setTemp("")
+      setFeelsLikeTemp("")
+      setCondition("")
+      setCity("")
+      setState("")
+    }
+  });
 }
 
 console.log(temp)
@@ -75,7 +85,8 @@ console.log(condition)
                 />
               </div>
             </form>
-            {showWeatherOutput ? <p className='response'>It is currently {temp}°F in {city}, {state}. It feels like {feelsLikeTemp}°F and conditions are {condition}.</p> : null}
+            {temp === "" ? null : <p className='response'>It is currently {temp}°F in {city}, {state}. It feels like {feelsLikeTemp}°F and conditions are {condition}.</p>}
+            <p className='error'>{errors}</p>
           </div>
          
           <li><b>Overall health:</b> Your body loses fluids when you have a fever, vomiting or diarrhea. Drink more water or follow a doctor's recommendation to drink oral rehydration solutions. Other conditions that might require increased fluid intake include bladder infections and urinary tract stones.</li>
