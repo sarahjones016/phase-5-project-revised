@@ -1,8 +1,43 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./WaterKnowledge.css";
 import water from '../water.mp4'
+// import REACT_APP_API_KEY from './.env'
 
 function WaterKnowledge() {
+
+const MY_KEY = process.env.REACT_APP_API_KEY
+
+const [zipCode, setZipCode] = useState("")
+const [city, setCity] = useState("")
+const [state, setState] = useState("")
+const [temp, setTemp] = useState("")
+const [feelsLikeTemp, setFeelsLikeTemp] = useState("")
+const [condition, setCondition] = useState("")
+const [showWeatherOutput, setShowWeatherOutput] = useState(false)
+
+function handleWeatherSubmit(e) {
+  e.preventDefault();
+  console.log(zipCode)
+
+  fetch(`http://api.weatherapi.com/v1/current.json?key=${MY_KEY}&q=${zipCode}&aqi=no`)
+  .then(r => r.json())
+  .then(data => {
+    setTemp(data.current.temp_f)
+    setFeelsLikeTemp(data.current.feelslike_f)
+    setCondition(data.current.condition.text.toLowerCase())
+    setCity(data.location.name)
+    setState(data.location.region)
+    })
+
+    setShowWeatherOutput(!showWeatherOutput)
+    
+}
+
+console.log(temp)
+console.log(city)
+console.log(state)
+console.log(condition)
+
   return (
     <div className='container'>
       <div className='overlay'></div>
@@ -26,6 +61,23 @@ function WaterKnowledge() {
         <ol>
           <li><b>Exercise:</b> If you do any activity that makes you sweat, you need to drink extra water to cover the fluid loss. It's important to drink water before, during and after a workout.</li>
           <li><b>Environment:</b> Hot or humid weather can make you sweat and requires additional fluid. Dehydration also can occur at high altitudes.</li>
+
+          <div className='weather-container'>
+            <form onSubmit={handleWeatherSubmit}>
+              <div className='input'>
+                <p>Check The Current Weather For Your City: </p>
+                <input
+                  placeholder='Enter Zip Code'
+                  value={zipCode}
+                  minLength="5"
+                  maxLength="5"
+                  onChange={(e) => setZipCode(e.target.value)}
+                />
+              </div>
+            </form>
+            {showWeatherOutput ? <p className='response'>It is currently {temp}°F in {city}, {state}. It feels like {feelsLikeTemp}°F and conditions are {condition}.</p> : null}
+          </div>
+         
           <li><b>Overall health:</b> Your body loses fluids when you have a fever, vomiting or diarrhea. Drink more water or follow a doctor's recommendation to drink oral rehydration solutions. Other conditions that might require increased fluid intake include bladder infections and urinary tract stones.</li>
           <li><b>Pregnancy and breast-feeding:</b> If you are pregnant or breast-feeding, you may need additional fluids to stay hydrated.</li>
         </ol>
