@@ -68,8 +68,8 @@
 
 .cup {
     transform: translate(0%, 0%);
-    width: 140px;
-    height: 180px;
+    width: 14vh;
+    height: 18vh;
     border: 6px solid #011325;
     border-top: 2px solid transparent;
     border-radius: 15px;
@@ -86,7 +86,7 @@
     content: '';
     position: absolute;
     width: 50px;
-    height: 80px;
+    height: 8vh;
     border: 6px solid #fff;
     right: -69px;
     top: 3vh;
