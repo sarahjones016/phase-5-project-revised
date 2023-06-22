@@ -72,6 +72,53 @@ video {
     border-radius: 6px;
 }
 
+@media all and (max-width: 1078px) {
+    .left-panel {
+        margin-right: 10px;
+    }
+    
+    .right-panel {
+        margin-left: 10px;
+    }
+}
+
+/* tablet */
+@media all and (max-width: 991px) {
+
+    .panels {
+        display: inline-block;
+        width: 100%;
+    }
+    
+    .left-panel {
+        margin-top: 35px;
+        margin-left: 20px;
+        margin-right: 20px;
+        height: 29%;
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .right-panel {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 0px;
+        height: 61%;
+    }
+    
+    .right-top {
+        padding-top: 10px;
+    }
+    
+    .right-panel h2 {
+        padding: 0px;
+    }
+
+    
+}
+
 /* phone */
 @media all and (max-width: 767px) {
 

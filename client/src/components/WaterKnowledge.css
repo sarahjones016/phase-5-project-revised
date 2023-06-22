@@ -95,6 +95,16 @@ li {
     margin-right: 10px;
 }
 
+/* tablet */
+@media all and (max-width: 991px) {
+
+.full-panel {
+    width: 92%;
+    height: 92%;
+}
+    
+}
+
 /* phone */
 @media all and (max-width: 767px) {
 
