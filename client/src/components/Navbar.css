@@ -57,6 +57,19 @@ a {
     color: white;
 }
 
+/* tablet */
+@media all and (max-width: 991px) {
+
+.navBar {
+    width: 45vw;
+}
+
+.navButtonTwo {
+    width: 45vw;
+}
+
+}
+
 /* phone */
 @media all and (max-width: 767px) {
 
@@ -69,3 +82,4 @@ a {
 }
 
 }
+

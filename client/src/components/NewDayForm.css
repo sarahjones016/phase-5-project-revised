@@ -37,6 +37,34 @@
     color: white;
 }
 
+/* tablet */
+@media all and (max-width: 991px) {
+    .form-holder {
+        margin-top: 0px;
+    }
+    
+    .div {
+        padding-top: 5px;
+    }
+    
+    .form-holder form label {
+        margin-top: 5px;
+        font-size: 14px;
+    }
+    
+    .form-submit-btn {
+        width: 55px;
+        height: 25px;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    
+    .div h2 {
+        padding-bottom: 5px;
+    }
+
+}
+
 /* phone */
 @media all and (max-width: 767px) {
 .form-holder {
