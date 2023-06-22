@@ -108,5 +108,22 @@ video {
 
 .logo-name {
     text-align: center;
+}
+
+/* phone */
+@media all and (max-width: 767px) {
+
+.signup-box {
+    width: 330px;
+}
+
+
+.signup-box form {
+    width: 270px;
+}
+
+.submit-btn {
+    width: 287px;
+}
 
 }

@@ -56,3 +56,16 @@ a {
     border-radius: 6px;
     color: white;
 }
+
+/* phone */
+@media all and (max-width: 767px) {
+
+.navBar {
+    width: 65vw;
+}
+
+.navButtonTwo {
+    width: 65vw;
+}
+
+}

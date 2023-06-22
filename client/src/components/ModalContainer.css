@@ -69,3 +69,13 @@
     align-items: center;
     justify-content: center;
 }
+
+/* phone */
+@media all and (max-width: 767px) {
+
+.popup-inner {
+    height: 290px;
+    width: 290px;
+}
+
+}
