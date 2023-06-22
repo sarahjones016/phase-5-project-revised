@@ -36,3 +36,39 @@
     border-radius: 6px;
     color: white;
 }
+
+/* phone */
+@media all and (max-width: 767px) {
+.form-holder {
+    margin-top: 0px;
+}
+
+.div {
+    padding-top: 5px;
+}
+
+.form-holder form label {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* .form-holder form input {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid grey;
+    border-radius: 6px;
+    outline: none;
+} */
+
+.form-submit-btn {
+    width: 55px;
+    height: 25px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.div h2 {
+    padding-bottom: 5px;
+}
+    
+}

@@ -120,3 +120,21 @@ video {
 .logo-name {
     text-align: center;
 }
+
+/* phone */
+@media all and (max-width: 767px) {
+
+.login-box {
+    width: 330px;
+}
+
+
+.login-box form {
+    width: 270px;
+}
+
+.submit-btn {
+    width: 287px;
+}
+
+}

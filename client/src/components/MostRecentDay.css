@@ -1,0 +1,11 @@
+/* phone */
+@media all and (max-width: 767px) {
+.card-holder {
+    height: 37vh;
+}    
+
+.card-holder h2 {
+    padding: 0px;
+}
+
+}

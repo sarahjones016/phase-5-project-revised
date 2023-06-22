@@ -94,3 +94,34 @@ li {
 .input p {
     margin-right: 10px;
 }
+
+/* phone */
+@media all and (max-width: 767px) {
+
+.full-panel {
+    width: 90%;
+    height: 88%;
+}
+
+.general-knowledge {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.factors {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.input {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+li {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+    
+}
