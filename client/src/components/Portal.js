@@ -42,6 +42,13 @@ function Portal({user}) {
     handleCloseClick()
   }
 
+  function handleDelete(id) {
+    const deletedDays = userDailyConsumptions.filter((day) => {
+      return day.id !== id
+    })
+    setUserDailyConsumptions(deletedDays);
+  }
+
   return (
     <div className='portal'>
       <div className='overlay'></div>
@@ -57,7 +64,7 @@ function Portal({user}) {
               </div>
               <h2>All Days</h2>
               <div className='right-bottom'>
-                <DaysList days={userDailyConsumptions}/>
+                <DaysList handleDelete={handleDelete} days={userDailyConsumptions}/>
               </div>
         </div>
         

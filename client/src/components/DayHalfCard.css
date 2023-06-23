@@ -13,6 +13,8 @@
 .detail {
     padding: 10px;
     font-size: 18px;
+    display: flex;
+    align-items: center;
 }
 
 /* tablet */
@@ -25,7 +27,7 @@
 @media all and (max-width: 767px) {
 .detail {
     font-size: 12px;
-    padding: 5px;
+    padding: 3px;
 } 
 
 .half-card {
