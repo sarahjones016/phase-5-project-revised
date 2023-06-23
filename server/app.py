@@ -124,6 +124,23 @@ class Daily_ConsumptionsByID(Resource):
             )
 
         return response
+    
+    def delete(self, id):
+
+        daily_consumption = Daily_Consumption.query.filter_by(id = id).first()
+
+        if daily_consumption:
+            db.session.delete(daily_consumption)
+            db.session.commit()
+
+            response = make_response(
+                "",
+                204
+            )
+
+            return response
+        
+        return {"error": "Day not found"}, 404
 
 api.add_resource(Daily_ConsumptionsByID, '/daily_consumptions/<int:id>')
 
