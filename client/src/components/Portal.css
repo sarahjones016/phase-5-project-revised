@@ -72,6 +72,14 @@ video {
     border-radius: 6px;
 }
 
+.dropdown-div {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    justify-content: space-between;
+}
+
 @media all and (max-width: 1078px) {
     .left-panel {
         margin-right: 10px;
@@ -151,6 +159,20 @@ video {
 
 .right-panel h2 {
     padding: 0px;
+}
+
+.dropdown-div {
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+}
+
+.dropdown-div select {
+    font-size: 12px;
+}
+
+.dropdown-div input {
+    font-size: 12px;
 }
 
 

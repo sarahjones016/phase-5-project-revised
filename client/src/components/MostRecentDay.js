@@ -4,10 +4,7 @@ import DayFullCard from './DayFullCard';
 
 function MostRecentDay({days, handleAddDrinkClick, handleCloseClick, showModal, onUpdateDay, cupHeight, setCupHeight}) {
 
-  // const recentDay = days[0]
-
-  // console.log(days)
-  // console.log(recentDay)
+  console.log(days)
 
   return (
     <div>

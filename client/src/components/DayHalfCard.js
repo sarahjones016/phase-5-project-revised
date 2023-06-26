@@ -5,6 +5,8 @@ import { IconContext } from "react-icons";
 
 function DayHalfCard({day, handleDelete}) {
 
+  // console.log(day.consumption_goal)
+
   function handleDeleteClick() {
     console.log("day has been deleted")
 
@@ -17,7 +19,7 @@ function DayHalfCard({day, handleDelete}) {
   }
 
   return (
-    <div className='half-card'>
+      <div className='half-card'>
         <p className='detail'>{day.date}</p>
         <p className='detail'>·</p>
         <p className='detail'>Water Consumed: {day.ounces_consumed}oz</p>
