@@ -12,6 +12,7 @@ function Portal({user}) {
   const [cupHeight, setCupHeight] = useState("filler-0")
   const [toggle, setToggle] = useState("Select Month")
   const [search, setSearch] = useState("")
+  const [drinks, setDrinks] = useState([])
 
 
   useEffect(() => {
@@ -110,7 +111,7 @@ function Portal({user}) {
             </div>
             <div className='right-panel'>
               <div className='right-top'>
-                <MostRecentDay cupHeight={cupHeight} setCupHeight={setCupHeight} onUpdateDay={onUpdateDay} showModal={showModal} handleCloseClick={handleCloseClick} handleAddDrinkClick={handleAddDrinkClick} days={searchAndToggledDays}/>
+                <MostRecentDay drinks={drinks} setDrinks={setDrinks} cupHeight={cupHeight} setCupHeight={setCupHeight} onUpdateDay={onUpdateDay} showModal={showModal} handleCloseClick={handleCloseClick} handleAddDrinkClick={handleAddDrinkClick} days={searchAndToggledDays}/>
               </div>
               <h2>All Days</h2>
                 <div className="dropdown-div">

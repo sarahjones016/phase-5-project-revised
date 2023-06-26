@@ -1,9 +1,12 @@
-import React, {useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import "./DayFullCard.css";
 import ModalContainer from './ModalContainer';
+import DetailContainer from './DetailContainer';
 import waterInCup from '../water-in-cup.mp4'
 
-function DayFullCard({day, handleAddDrinkClick, handleCloseClick, showModal, onUpdateDay, cupHeight, setCupHeight}) {
+function DayFullCard({day, handleAddDrinkClick, handleCloseClick, showModal, onUpdateDay, cupHeight, setCupHeight, drinks, setDrinks}) {
+
+  const [showDetails, setShowDetails] = useState(false)
 
   useEffect(() => {
 
@@ -31,6 +34,29 @@ function DayFullCard({day, handleAddDrinkClick, handleCloseClick, showModal, onU
       setCupHeight("filler-100")
     }     
   }, [day])
+
+  useEffect(() => {
+    fetch(`/drinks/daily_consumption/${day.id}`)
+    .then(r => r.json())
+    .then(data => {
+        setDrinks(data)
+        console.log(data)
+        })
+    }, [])
+
+  function handleNewDrinkFormSubmit(newDrink) {
+    setDrinks([...drinks, newDrink])
+    // console.log(newDrink)
+    // console.log(drinks)
+  }
+
+  function openDetails() {
+    setShowDetails(!showDetails)
+  }
+
+  function closeDetails() {
+    setShowDetails(!showDetails)
+  }
   
   return (
     <div className='height-div'>
@@ -41,7 +67,7 @@ function DayFullCard({day, handleAddDrinkClick, handleCloseClick, showModal, onU
         </div>
         <div className='primary-content-div'>
           <div className='primary-content'>
-          <div className='cup-div'>
+          <div className='cup-div' onClick={openDetails}>
             <div className='cup'>
               <video src={waterInCup} className={cupHeight} autoPlay loop muted />
               {/* <div className={cupHeight}></div> */}
@@ -59,7 +85,8 @@ function DayFullCard({day, handleAddDrinkClick, handleCloseClick, showModal, onU
           <p>Currently Consumed: {day.ounces_consumed}oz</p>
         </div>
       </div>
-      {showModal ? <ModalContainer onUpdateDay={onUpdateDay} day={day} handleCloseClick={handleCloseClick}/> : null}
+      {showDetails ? <DetailContainer day={day} closeDetails={closeDetails} drinks={drinks} /> : null}
+      {showModal ? <ModalContainer handleNewDrinkFormSubmit={handleNewDrinkFormSubmit} onUpdateDay={onUpdateDay} day={day} handleCloseClick={handleCloseClick}/> : null}
     </div>
   )
 }
