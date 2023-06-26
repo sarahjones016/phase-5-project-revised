@@ -4,8 +4,6 @@ import DayHalfCard from './DayHalfCard'
 
 function DaysList({days, handleDelete}) {
 
-  // console.log(days)
-
   return (
     <div>
       <div className='card-holder'>
