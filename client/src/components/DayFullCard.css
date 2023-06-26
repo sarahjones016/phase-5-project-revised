@@ -89,7 +89,7 @@
 .filler-0 {
     height: 0%;
     width: 100%;
-    background-color: rgba(27, 149, 224, .9);
+    /* background-color: rgba(27, 149, 224, .9); */
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
@@ -97,82 +97,111 @@
 .filler-10 {
     height: 10%;
     width: 100%;
-    background-color: rgba(27, 149, 224, .9);
+    /* background-color: rgba(27, 149, 224, .9); */
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    box-shadow: inset 0 0 20px 0 rgba(0, 0 , 0, 0.8),
+    0 0 20px 0 rgba(0, 0, 0, 0.3)
+    ;
 }
 
 .filler-20 {
     height: 20%;
     width: 100%;
-    background-color: rgba(27, 149, 224, .9);
+    /* background-color: rgba(27, 149, 224, .9); */
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    box-shadow: inset 0 0 20px 0 rgba(0, 0 , 0, 0.8),
+    0 0 20px 0 rgba(0, 0, 0, 0.3)
+    ;
 }
 
 .filler-30 {
     height: 30%;
     width: 100%;
-    background-color: rgba(27, 149, 224, .9);
+    /* background-color: rgba(27, 149, 224, .9); */
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    box-shadow: inset 0 0 20px 0 rgba(0, 0 , 0, 0.8),
+    0 0 20px 0 rgba(0, 0, 0, 0.3)
+    ;
 }
 
 .filler-40 {
     height: 40%;
     width: 100%;
-    background-color: rgba(27, 149, 224, .9);
+    /* background-color: rgba(27, 149, 224, .9); */
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    box-shadow: inset 0 0 20px 0 rgba(0, 0 , 0, 0.8),
+    0 0 20px 0 rgba(0, 0, 0, 0.3)
+    ;
 }
 
 .filler-50 {
     height: 50%;
     width: 100%;
-    background-color: rgba(27, 149, 224, .9);
+    /* background-color: rgba(27, 149, 224, .9); */
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    box-shadow: inset 0 0 20px 0 rgba(0, 0 , 0, 0.8),
+    0 0 20px 0 rgba(0, 0, 0, 0.3)
+    ;
 }
 
 .filler-60 {
     height: 60%;
     width: 100%;
-    background-color: rgba(27, 149, 224, .9);
+    /* background-color: rgba(27, 149, 224, .9); */
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    box-shadow: inset 0 0 20px 0 rgba(0, 0 , 0, 0.8),
+    0 0 20px 0 rgba(0, 0, 0, 0.3)
+    ;
 }
 
 .filler-70 {
     height: 70%;
     width: 100%;
-    background-color: rgba(27, 149, 224, .9);
+    /* background-color: rgba(27, 149, 224, .9); */
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    box-shadow: inset 0 0 20px 0 rgba(0, 0 , 0, 0.8),
+    0 0 20px 0 rgba(0, 0, 0, 0.3)
+    ;
 }
 
 .filler-80 {
     height: 80%;
     width: 100%;
-    background-color: rgba(27, 149, 224, .9);
+    /* background-color: rgba(27, 149, 224, .9); */
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    box-shadow: inset 0 0 20px 0 rgba(0, 0 , 0, 0.8),
+    0 0 20px 0 rgba(0, 0, 0, 0.3)
+    ;
 }
 
 .filler-90 {
     height: 90%;
     width: 100%;
-    background-color: rgba(27, 149, 224, .9);
+    /* background-color: rgba(27, 149, 224, .9); */
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    /* animation: animate 4s ease-in-out infinite; */
+    box-shadow: inset 0 0 20px 0 rgba(0, 0 , 0, 0.8),
+    0 0 20px 0 rgba(0, 0, 0, 0.3)
+    ;
 }
 
 .filler-100 {
     height: 100%;
     width: 100%;
-    background-color: rgba(27, 149, 224, .9);
+    /* background-color: rgba(27, 149, 224, .9); */
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    box-shadow: inset 0 0 20px 0 rgba(0, 0 , 0, 0.8),
+    0 0 20px 0 rgba(0, 0, 0, 0.3)
+    ;
 }
 
 /* tablet */
@@ -245,9 +274,5 @@
     margin-left: 10px;
     margin-right: 10px;
 }
-
-/* .height-div {
-    height: 40vh;
-} */
  
 }
