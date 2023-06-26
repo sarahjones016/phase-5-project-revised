@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import "./DayFullCard.css";
 import ModalContainer from './ModalContainer';
+import waterInCup from '../water-in-cup.mp4'
 
 function DayFullCard({day, handleAddDrinkClick, handleCloseClick, showModal, onUpdateDay, cupHeight, setCupHeight}) {
 
@@ -42,6 +43,7 @@ function DayFullCard({day, handleAddDrinkClick, handleCloseClick, showModal, onU
           <div className='primary-content'>
           <div className='cup-div'>
             <div className='cup'>
+              {/* <video src={waterInCup} className={cupHeight} autoPlay loop muted /> */}
               <div className={cupHeight}></div>
             </div>
           </div>
