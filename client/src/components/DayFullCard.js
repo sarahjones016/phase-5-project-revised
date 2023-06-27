@@ -40,7 +40,7 @@ function DayFullCard({day, handleAddDrinkClick, handleCloseClick, showModal, onU
     .then(r => r.json())
     .then(data => {
         setDrinks(data)
-        console.log(data)
+        // console.log(data)
         })
     }, [])
 

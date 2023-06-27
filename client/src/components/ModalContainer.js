@@ -30,7 +30,7 @@ function ModalContainer({handleCloseClick, day, onUpdateDay, handleNewDrinkFormS
           })
           .then((res) => res.json())
           .then((data) => {
-            onUpdateDay(data)
+            //onUpdateDay(data)
             handleNewDrinkFormSubmit(data)
             // console.log(data)
           })
