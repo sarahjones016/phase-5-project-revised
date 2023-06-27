@@ -29,7 +29,7 @@ function Portal({user}) {
   }
 
   function handleAddDrinkClick() {
-    // console.log("add new drink has been clicked")
+    console.log("add new drink has been clicked")
     setShowModal(!showModal)
   }
 
