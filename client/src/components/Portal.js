@@ -38,6 +38,8 @@ function Portal({user}) {
   }
 
   function onUpdateDay(updatedDay) {
+    // console.assert(updatedDay.ounces_consumed != null,"onupdateday got bad object")
+    // console.log(updatedDay)
     const updatedDays = userDailyConsumptions.map((day) =>
       day.id === updatedDay.id ? updatedDay : day
     );
