@@ -42,10 +42,10 @@ function DetailContainer({closeDetails, drinks, day}) {
     useEffect(() => {
         if (Math.round((waterOuncesSum / day.ounces_consumed)*100) === 0) {
             setWaterPercentageHeight("water-filler-0")
-        // } else if (Math.round((waterOuncesSum / day.ounces_consumed)*100) >= 1 && Math.round((waterOuncesSum / day.ounces_consumed)*100) <= 5) {
-        //     setWaterPercentageHeight("water-filler-5")
-        } else if (Math.round((waterOuncesSum / day.ounces_consumed)*100) >= 1 && Math.round((waterOuncesSum / day.ounces_consumed)*100) <= 10) {
+        } else if (Math.round((waterOuncesSum / day.ounces_consumed)*100) >= 1 && Math.round((waterOuncesSum / day.ounces_consumed)*100) <= 5) {
             setWaterPercentageHeight("water-filler-5")
+        } else if (Math.round((waterOuncesSum / day.ounces_consumed)*100) >= 6 && Math.round((waterOuncesSum / day.ounces_consumed)*100) <= 10) {
+            setWaterPercentageHeight("water-filler-10")
         } else if (Math.round((waterOuncesSum / day.ounces_consumed)*100) >= 11 && Math.round((waterOuncesSum / day.ounces_consumed)*100) <= 15) {
             setWaterPercentageHeight("water-filler-15")
         } else if (Math.round((waterOuncesSum / day.ounces_consumed)*100) >= 16 && Math.round((waterOuncesSum / day.ounces_consumed)*100) <= 20) {
@@ -116,10 +116,10 @@ function DetailContainer({closeDetails, drinks, day}) {
     useEffect(() => {
         if (Math.round((sportsDrinkOuncesSum / day.ounces_consumed)*100) === 0) {
             setSportsDrinkPercentageHeight("sports-drink-filler-0")
-        // } else if (Math.round((sportsDrinkOuncesSum / day.ounces_consumed)*100) >= 1 && Math.round((sportsDrinkOuncesSum / day.ounces_consumed)*100) <= 5) {
-        //     setSportsDrinkPercentageHeight("sports-drink-filler-5")
-        } else if (Math.round((sportsDrinkOuncesSum / day.ounces_consumed)*100) >= 1 && Math.round((sportsDrinkOuncesSum / day.ounces_consumed)*100) <= 10) {
+        } else if (Math.round((sportsDrinkOuncesSum / day.ounces_consumed)*100) >= 1 && Math.round((sportsDrinkOuncesSum / day.ounces_consumed)*100) <= 5) {
             setSportsDrinkPercentageHeight("sports-drink-filler-5")
+        } else if (Math.round((sportsDrinkOuncesSum / day.ounces_consumed)*100) >= 6 && Math.round((sportsDrinkOuncesSum / day.ounces_consumed)*100) <= 10) {
+            setSportsDrinkPercentageHeight("sports-drink-filler-10")
         } else if (Math.round((sportsDrinkOuncesSum / day.ounces_consumed)*100) >= 11 && Math.round((sportsDrinkOuncesSum / day.ounces_consumed)*100) <= 15) {
             setSportsDrinkPercentageHeight("sports-drink-filler-15")
         } else if (Math.round((sportsDrinkOuncesSum / day.ounces_consumed)*100) >= 16 && Math.round((sportsDrinkOuncesSum / day.ounces_consumed)*100) <= 20) {
@@ -190,10 +190,10 @@ function DetailContainer({closeDetails, drinks, day}) {
     useEffect(() => {
         if (Math.round((milkOuncesSum / day.ounces_consumed)*100) === 0) {
             setMilkPercentageHeight("milk-filler-0")
-        // } else if (Math.round((milkOuncesSum / day.ounces_consumed)*100) >= 1 && Math.round((milkOuncesSum / day.ounces_consumed)*100) <= 5) {
-        //     setMilkPercentageHeight("milk-filler-5")
-        } else if (Math.round((milkOuncesSum / day.ounces_consumed)*100) >= 1 && Math.round((milkOuncesSum / day.ounces_consumed)*100) <= 10) {
+        } else if (Math.round((milkOuncesSum / day.ounces_consumed)*100) >= 1 && Math.round((milkOuncesSum / day.ounces_consumed)*100) <= 5) {
             setMilkPercentageHeight("milk-filler-5")
+        } else if (Math.round((milkOuncesSum / day.ounces_consumed)*100) >= 6 && Math.round((milkOuncesSum / day.ounces_consumed)*100) <= 10) {
+            setMilkPercentageHeight("milk-filler-10")
         } else if (Math.round((milkOuncesSum / day.ounces_consumed)*100) >= 11 && Math.round((milkOuncesSum / day.ounces_consumed)*100) <= 15) {
             setMilkPercentageHeight("milk-filler-15")
         } else if (Math.round((milkOuncesSum / day.ounces_consumed)*100) >= 16 && Math.round((milkOuncesSum / day.ounces_consumed)*100) <= 20) {
@@ -264,10 +264,10 @@ function DetailContainer({closeDetails, drinks, day}) {
     useEffect(() => {
         if (Math.round((juiceOuncesSum / day.ounces_consumed)*100) === 0) {
             setJuicePercentageHeight("juice-filler-0")
-        // } else if (Math.round((juiceOuncesSum / day.ounces_consumed)*100) >= 1 && Math.round((juiceOuncesSum / day.ounces_consumed)*100) <= 5) {
-        //     setJuicePercentageHeight("juice-filler-5")
-        } else if (Math.round((juiceOuncesSum / day.ounces_consumed)*100) >= 1 && Math.round((juiceOuncesSum / day.ounces_consumed)*100) <= 10) {
+        } else if (Math.round((juiceOuncesSum / day.ounces_consumed)*100) >= 1 && Math.round((juiceOuncesSum / day.ounces_consumed)*100) <= 5) {
             setJuicePercentageHeight("juice-filler-5")
+        } else if (Math.round((juiceOuncesSum / day.ounces_consumed)*100) >= 6 && Math.round((juiceOuncesSum / day.ounces_consumed)*100) <= 10) {
+            setJuicePercentageHeight("juice-filler-10")
         } else if (Math.round((juiceOuncesSum / day.ounces_consumed)*100) >= 11 && Math.round((juiceOuncesSum / day.ounces_consumed)*100) <= 15) {
             setJuicePercentageHeight("juice-filler-15")
         } else if (Math.round((juiceOuncesSum / day.ounces_consumed)*100) >= 16 && Math.round((juiceOuncesSum / day.ounces_consumed)*100) <= 20) {
@@ -338,10 +338,10 @@ function DetailContainer({closeDetails, drinks, day}) {
     useEffect(() => {
         if (Math.round((teaOuncesSum / day.ounces_consumed)*100) === 0) {
             setTeaPercentageHeight("tea-filler-0")
-        // } else if (Math.round((teaOuncesSum / day.ounces_consumed)*100) >= 1 && Math.round((teaOuncesSum / day.ounces_consumed)*100) <= 5) {
-        //     setTeaPercentageHeight("tea-filler-5")
-        } else if (Math.round((teaOuncesSum / day.ounces_consumed)*100) >= 1 && Math.round((teaOuncesSum / day.ounces_consumed)*100) <= 10) {
+        } else if (Math.round((teaOuncesSum / day.ounces_consumed)*100) >= 1 && Math.round((teaOuncesSum / day.ounces_consumed)*100) <= 5) {
             setTeaPercentageHeight("tea-filler-5")
+        } else if (Math.round((teaOuncesSum / day.ounces_consumed)*100) >= 6 && Math.round((teaOuncesSum / day.ounces_consumed)*100) <= 10) {
+            setTeaPercentageHeight("tea-filler-10")
         } else if (Math.round((teaOuncesSum / day.ounces_consumed)*100) >= 11 && Math.round((teaOuncesSum / day.ounces_consumed)*100) <= 15) {
             setTeaPercentageHeight("tea-filler-15")
         } else if (Math.round((teaOuncesSum / day.ounces_consumed)*100) >= 16 && Math.round((teaOuncesSum / day.ounces_consumed)*100) <= 20) {
@@ -412,10 +412,10 @@ function DetailContainer({closeDetails, drinks, day}) {
     useEffect(() => {
         if (Math.round((otherOuncesSum / day.ounces_consumed)*100) === 0) {
             setOtherPercentageHeight("other-filler-0")
-        // } else if (Math.round((otherOuncesSum / day.ounces_consumed)*100) >= 1 && Math.round((otherOuncesSum / day.ounces_consumed)*100) <= 5) {
-        //     setOtherPercentageHeight("other-filler-5")
-        } else if (Math.round((otherOuncesSum / day.ounces_consumed)*100) >= 1 && Math.round((otherOuncesSum / day.ounces_consumed)*100) <= 10) {
+        } else if (Math.round((otherOuncesSum / day.ounces_consumed)*100) >= 1 && Math.round((otherOuncesSum / day.ounces_consumed)*100) <= 5) {
             setOtherPercentageHeight("other-filler-5")
+        } else if (Math.round((otherOuncesSum / day.ounces_consumed)*100) >= 6 && Math.round((otherOuncesSum / day.ounces_consumed)*100) <= 10) {
+            setOtherPercentageHeight("other-filler-10")
         } else if (Math.round((otherOuncesSum / day.ounces_consumed)*100) >= 11 && Math.round((otherOuncesSum / day.ounces_consumed)*100) <= 15) {
             setOtherPercentageHeight("other-filler-15")
         } else if (Math.round((otherOuncesSum / day.ounces_consumed)*100) >= 16 && Math.round((otherOuncesSum / day.ounces_consumed)*100) <= 20) {
