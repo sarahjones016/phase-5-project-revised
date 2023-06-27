@@ -51,7 +51,11 @@ function DayFullCard({day, handleAddDrinkClick, handleCloseClick, showModal, onU
   }
 
   function openDetails() {
-    setShowDetails(!showDetails)
+    if (cupHeight === "filler-0") {
+      setShowDetails(showDetails)
+    } else {
+      setShowDetails(!showDetails)
+    }
   }
 
   function closeDetails() {
