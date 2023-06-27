@@ -510,6 +510,11 @@
         height: 60vh;
         width: 290px;
     }
+
+    .detail-inner h1 {
+        font-size: 28px;
+        padding-top: 10px;
+    }
     
     }
 
