@@ -113,7 +113,8 @@ video {
         margin-left: 20px;
         margin-right: 20px;
         margin-top: 0px;
-        height: 61%;
+        /* height: 61%; */
+        height: 64%;
     }
     
     .right-top {
@@ -124,7 +125,6 @@ video {
         padding: 0px;
     }
 
-    
 }
 
 /* phone */
