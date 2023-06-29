@@ -29,7 +29,7 @@ video {
     z-index: 2;
     background-color: #f3f3f2;
     width: 75%;
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 85%;
 }
 

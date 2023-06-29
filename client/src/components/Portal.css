@@ -42,7 +42,7 @@ video {
     margin: 45px;
     background-color: #f3f3f2;
     margin-left: 40px;
-    overflow-y: scroll;
+    overflow-y: auto;
     /* position: absolute; */
     /* margin-bottom: 0px; */
   }
@@ -67,7 +67,7 @@ video {
 
 .right-bottom {
     flex: 40;
-    overflow-y: scroll;
+    overflow-y: auto;
     background-color: #f3f3f2;
     border-radius: 6px;
 }
@@ -125,6 +125,10 @@ video {
         padding: 0px;
     }
 
+    .right-bottom {
+        flex: 24;
+    }
+
 }
 
 /* phone */
@@ -174,6 +178,12 @@ video {
 .dropdown-div input {
     font-size: 12px;
 }
+
+.right-bottom {
+    flex: 24;
+}
+
+
 
 
 }

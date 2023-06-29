@@ -2,15 +2,15 @@
 @media all and (max-width: 991px) {
 
 .card-holder {
-    height: 42vh;
-}  
+    height: 10vh;
+}     
     
 }
 
 /* phone */
 @media all and (max-width: 767px) {
 .card-holder {
-    height: 37vh;
+    height: 10vh;
 }    
 
 .card-holder h2 {
