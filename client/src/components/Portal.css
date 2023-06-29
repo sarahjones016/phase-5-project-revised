@@ -125,6 +125,10 @@ video {
         padding: 0px;
     }
 
+    .right-bottom {
+        flex: 24;
+    }
+
 }
 
 /* phone */
@@ -174,6 +178,12 @@ video {
 .dropdown-div input {
     font-size: 12px;
 }
+
+.right-bottom {
+    flex: 24;
+}
+
+
 
 
 }
